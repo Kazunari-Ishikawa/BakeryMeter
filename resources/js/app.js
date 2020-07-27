@@ -5,6 +5,9 @@
  */
 
 require('./bootstrap');
+require('./util/floatHeader');
+require('./util/menuTab');
+require('./util/toggleHeader');
 
 window.Vue = require('vue');
 import Vuetify from 'vuetify';

@@ -13,8 +13,8 @@
 @endsection
 
 @section('content')
-<section id="hero">
-  <div class="p-hero js-float-target">
+<section id="hero" class="js-float-target">
+  <div class="p-hero">
     <div class="p-hero__inner">
       <p class="p-hero__text p-hero__text--copy">お気に入りの<br>パン屋さんをさがそう</p>
     </div>

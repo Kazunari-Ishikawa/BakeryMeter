@@ -8,14 +8,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 $space_3l;
-  // opacity: 0;
+  opacity: 0;
   transition: $time_m;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
   &.isFloatActive {
-    // opacity: 1;
+    opacity: 1;
   }
   @include mq() {
     padding: 0 $space_default;
