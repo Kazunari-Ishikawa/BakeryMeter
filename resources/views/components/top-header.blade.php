@@ -1,4 +1,4 @@
-<header class="l-header isFloatActive">
+<header class="l-header js-float-menu">
   <a class="l-header__title" href="/">
     <h1>BakeryMeter</h1>
   </a>

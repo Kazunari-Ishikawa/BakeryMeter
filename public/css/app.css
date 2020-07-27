@@ -238,6 +238,10 @@ textarea {
   }
 }
 
+.l-main.isFloatActive {
+  margin-top: 60px;
+}
+
 .l-footer {
   background: #707070;
   color: white;
@@ -515,8 +519,6 @@ textarea {
   display: block;
   background: #de9610;
   border-radius: 4px;
-  box-shadow: 5px 5px 10px #ccc;
-  box-sizing: border-box;
   color: white;
   font-size: 14px;
   line-height: 50px;
@@ -533,7 +535,7 @@ textarea {
 
 .c-btn:hover {
   color: white;
-  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .c-btn--em {
@@ -542,10 +544,6 @@ textarea {
 
 .c-btn--full {
   width: 100%;
-}
-
-.c-btn--full:hover {
-  transform: scale(1.03);
 }
 
 .c-btn--hero {
@@ -761,7 +759,6 @@ textarea {
 }
 
 .c-form {
-  background: white;
   padding: 40px;
 }
 

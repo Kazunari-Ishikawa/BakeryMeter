@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.top-app')
 
 @section('title')
 <title>{{ config('app.name', 'Laravel') }}</title>
