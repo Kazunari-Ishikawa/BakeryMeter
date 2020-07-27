@@ -16,7 +16,7 @@
 <section id="hero">
   <div class="p-hero js-float-target">
     <div class="p-hero__inner">
-      <p class="p-hero__text p-hero__text--em">お気に入りのパン屋さんを<br>さがそう</p>
+      <p class="p-hero__text p-hero__text--copy">お気に入りの<br>パン屋さんをさがそう</p>
     </div>
   </div>
 </section>

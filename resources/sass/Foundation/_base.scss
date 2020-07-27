@@ -3,6 +3,7 @@
 // ====================================
 html, body {
   background: $color_bg;
+  box-sizing: border-box;
   color: $color_default;
   font-size: $font-size_default;
   font-family: $font-family_default;
