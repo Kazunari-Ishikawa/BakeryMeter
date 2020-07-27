@@ -1,0 +1,19 @@
+.p-band {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq() {
+    display: block;
+    margin: $space_default 0;
+  }
+  &__text {
+    font-size: $font-size_l;
+    color: white;
+    margin-right: $space_m;
+    @include mq() {
+      font-size: $font-size_default;
+      margin-right: 0;
+      margin-bottom: $space_default;
+    }
+  }
+}

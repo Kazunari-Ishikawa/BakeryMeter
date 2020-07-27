@@ -1,0 +1,38 @@
+.p-userDetail {
+  display: block;
+  background: white;
+  box-sizing: border-box;
+  margin-bottom: $space_3l;
+  padding: $space_default;
+  width: 100%;
+  &__icon {
+    margin: 0 auto $space_m auto;
+    height: 120px;
+    width: 120px;
+    @include mq('md') {
+      height: 90px;
+      width: 90px;
+    }
+  }
+  &__img {
+    display: block;
+    border: 2px solid $color_sub2;
+    border-radius: 50%;
+  }
+  &__name {
+    font-size: $font-size_m;
+    margin-bottom: $space_m;
+    text-align: center;
+  }
+  &__profile {
+    background: $color_bg;
+    border-radius: 10px;
+    font-size: $font-size_m;
+    min-height: 60px;
+    padding: $space_default;
+    white-space: pre-wrap;
+    @include mq() {
+      font-size: $font-size_s;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.l-sidebar {
+  width: 25%;
+  @include mq('md') {
+    width: 100%;
+    display: none;
+  }
+}

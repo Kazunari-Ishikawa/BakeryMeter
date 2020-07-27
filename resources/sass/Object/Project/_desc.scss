@@ -1,0 +1,48 @@
+.p-desc {
+  background: white;
+  box-sizing: border-box;
+  margin-right: $space_3l;
+  &:last-child {
+    margin-right: 0;
+  }
+  padding: $space_default;
+  width: 33.3%;
+  @include mq('md') {
+    margin-bottom: $space_3l;
+    width: 100%;
+  }
+  @include mq() {
+    margin-bottom: $space_default;
+  }
+  &__container {
+    display: flex;
+    @include mq('md') {
+      display: block;
+    }
+  }
+  &__title {
+    font-size: $font-size_l;
+    margin-bottom: $space_l;
+    @include mq(){
+      font-size: $font-size_default;
+      margin-bottom: $space_default;
+    }
+  }
+  &__subtitle {
+    font-size: $font-size_default;
+    margin-bottom: $space_default;
+    border-bottom: 2px solid $color_main;
+    @include mq() {
+      font-size: $font-size_m;
+      margin-bottom: $space_m;
+    }
+  }
+  &__text {
+    font-size: $font-size_m;
+    margin-bottom: $space_3l;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

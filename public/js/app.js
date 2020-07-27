@@ -94113,6 +94113,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./util/floatHeader */ "./resources/js/util/floatHeader.js");
+
+__webpack_require__(/*! ./util/menuTab */ "./resources/js/util/menuTab.js");
+
+__webpack_require__(/*! ./util/toggleHeader */ "./resources/js/util/toggleHeader.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 
@@ -94252,6 +94258,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/util/floatHeader.js":
+/*!******************************************!*\
+  !*** ./resources/js/util/floatHeader.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  var targetHieght = $(".js-float-target").height();
+  $(window).on("scroll", function () {
+    $(".js-float-menu").toggleClass("isFloatActive", $(this).scrollTop() > targetHieght);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/util/menuTab.js":
+/*!**************************************!*\
+  !*** ./resources/js/util/menuTab.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.js-spMenu-tab').click(function () {
+    $(this).next().slideToggle();
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/util/toggleHeader.js":
+/*!*******************************************!*\
+  !*** ./resources/js/util/toggleHeader.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.js-header-trigger').on('click', function () {
+    $('.js-header-toggle-target').toggleClass('isActive');
+    $('.js-trigger-bar').toggleClass('isActive');
+  });
+});
 
 /***/ }),
 
