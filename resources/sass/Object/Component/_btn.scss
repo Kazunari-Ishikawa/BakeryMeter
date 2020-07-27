@@ -3,8 +3,6 @@
   display: block;
   background: $color_main;
   border-radius: $radius_s;
-  box-shadow: 5px 5px 10px #ccc;
-  box-sizing: border-box;
   color: white;
   font-size: $font-size_m;
   line-height: 50px;
@@ -16,16 +14,13 @@
   }
   &:hover {
     color: white;
-    transform: scale(1.05);
+    opacity: 0.8;
   }
   &--em {
     background: $color_sub1;
   }
   &--full {
     width: 100%;
-    &:hover {
-      transform: scale(1.03);
-    }
   }
   &--hero {
     box-shadow: none;

@@ -1,3 +1,5 @@
 .l-main {
-  // margin-top: $height_header;
+  &.isFloatActive {
+    margin-top: $height_header;
+  }
 }

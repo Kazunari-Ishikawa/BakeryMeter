@@ -29,9 +29,9 @@
     <v-app>
 
       <!-- Header -->
-      @include('components.header')
+      @include('components.top-header')
 
-      <main id="main" class="l-main isFloatActive">
+      <main id="main" class="l-main">
 
         <!-- Flash Message -->
         @if (session('flash_message'))
