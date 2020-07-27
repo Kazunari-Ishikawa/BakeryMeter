@@ -1,0 +1,128 @@
+.c-work {
+  background: white;
+  display: block;
+  margin-bottom: $space_default;
+  padding: $space_default;
+  &__main {
+    display: flex;
+    margin-bottom: $space_default;
+    @include mq() {
+      display: block;
+    }
+  }
+  &__left {
+    flex: 1 1 40%;
+    box-sizing: border-box;
+  }
+  &__center {
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    border-left: 1px dashed $color_sub2;
+    border-right: 1px dashed $color_sub2;
+    margin: 0 $space_s;
+    padding: 0 $space_s;
+    @include mq() {
+      border-top: 1px dashed $color_sub2;
+      border-bottom: 1px dashed $color_sub2;
+      border-left: none;
+      border-right: none;
+      margin: $space_s 0;
+      padding: $space_s 0;
+      text-align: center;
+    }
+  }
+  &__right {
+    flex: 1 1 20%;
+    box-sizing: border-box;
+    @include mq() {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  &__title {
+    display: block;
+    font-size: $font-size_default;
+    margin-bottom: $space_default;
+    @include mq() {
+      font-size: $font-size_m;
+      margin-bottom: $space_m;
+    }
+    &:hover {
+      color: $color_main;
+      cursor: pointer;
+    }
+  }
+  &__category, &__price {
+    display: block;
+    font-size: $font-size_m;
+    margin-bottom: $space_m;
+    @include mq() {
+      font-size: $font-size_s;
+      margin-bottom: $space_s;
+    }
+  }
+  &__price {
+    & > br {
+      display: block;
+      @include mq() {
+        display: none;
+      }
+    }
+  }
+  &__price--min, &__price--max {
+    color: $color_sub1;
+    font-size: $font-size_l;
+  }
+  &__type {
+    border-bottom: 2px solid $color_main;
+    display: inline-block;
+    font-size: $font-size_m;
+    margin-bottom: $space_m;
+  }
+  &__count {
+    font-size: $font-size_m;
+    margin-bottom: $space_m;
+    & > span {
+      font-size: $font-size_default;
+      font-weight: bold;
+    }
+  }
+  &__link {
+    background: $color_main;
+    border-radius: $radius_s;
+    color: white;
+    font-size: $font-size_m;
+    margin-bottom: $space_m;
+    padding: $space_s;
+    &:hover {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+  &__sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq() {
+      display: block;
+    }
+  }
+  &__name, &__date {
+    font-size: $font-size_s;
+    @include mq() {
+      text-align: right;
+    }
+  }
+  &__name {
+    @include mq() {
+      margin-bottom: $space_s;
+    }
+  }
+  &__comment {
+    border-top: 1px dashed $color_sub2;
+    font-size: $font-size_m;
+    padding-top: $space_m;
+    margin: $space_m 0;
+  }
+}

@@ -1,0 +1,70 @@
+.c-board {
+  background: white;
+  border-bottom: 1px solid $color_bg;
+  display: block;
+  padding: $space_default;
+  transition: $time_s;
+  @include mq() {
+    padding: $space_s;
+  }
+  &__header {
+    margin-bottom: $space_s;
+    overflow: hidden;
+    border-bottom: 1px solid $color_main;
+  }
+  &__body {
+    display: flex;
+  }
+  &__title {
+    overflow: hidden;
+    & > h3 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    @include mq() {
+      font-size: $font-size_m;
+    }
+  }
+  &__subtitle {
+    font-size: $font-size_s;
+    margin-bottom: $space_s;
+  }
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: $space_s;
+    flex: 0 0 auto;
+  }
+  &__main {
+    flex: 1 1 auto;
+    overflow: hidden;
+    margin-right: $space_s;
+    @include mq() {
+      font-size: $font-size_m;
+    }
+  }
+  &__name {
+    margin-bottom: $space_s;
+  }
+  &__content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: $font-size_m;
+    @include mq() {
+    font-size: $font-size_s;
+    }
+  }
+  &__date {
+    flex: 0 1 auto;
+    font-size: $font-size_m;
+    @include mq() {
+      font-size: $font-size_s;
+    }
+  }
+  &__list {
+    margin-bottom: $space_3l;
+  }
+}

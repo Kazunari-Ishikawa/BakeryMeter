@@ -1,0 +1,37 @@
+.c-boardList {
+  margin-bottom: $space_3l;
+  @include mq() {
+    margin-bottom: $space_default;
+  }
+  &__header {
+    padding: $space_default;
+    background: white;
+  }
+  &__title {
+    color: $color_main;
+    font-size: $font-size_l;
+    font-weight: bold;
+  }
+  &__tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__type {
+    cursor: pointer;
+    font-weight: bold;
+    background: #ddd;
+    border-top: 2px solid white;
+    padding: $space_default;
+    text-align: center;
+    width: 50%;
+    &.isActive {
+      border-top: 2px solid $color_sub1;
+      background: white;
+    }
+    @include mq() {
+      font-size: $font-size_m;
+      padding: $space_m;
+    }
+  }
+}

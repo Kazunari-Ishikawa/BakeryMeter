@@ -1,0 +1,28 @@
+.c-cardList {
+  &__header {
+    margin-bottom: $space_l;
+    @include mq() {
+      margin-bottom: $space_default;
+    }
+  }
+  &__title {
+    font-size: $font-size_l;
+    @include mq() {
+      font-size: $font-size_default;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$space_3l;
+    @include mq() {
+      margin-right: -$space_default;
+    }
+    &--lg {
+      margin-right: -$space_3l;
+      @include mq('md') {
+        margin-right: 0;
+      }
+    }
+  }
+}
