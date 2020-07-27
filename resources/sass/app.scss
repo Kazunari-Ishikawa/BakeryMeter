@@ -1,8 +1,32 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// Foundation
+@import 'Foundation/variable';
+@import 'Foundation/reset';
+@import 'Foundation/base';
+@import 'Foundation/mixin';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Layout
+@import 'Layout/header';
+@import 'Layout/main';
+@import 'Layout/footer';
+@import 'Layout/container';
+@import 'Layout/nav';
+@import 'Layout/sidebar';
+@import 'Layout/band';
+
+// Project
+@import 'Object/Project/hero';
+@import 'Object/Project/band';
+@import 'Object/Project/desc';
+
+// Component
+@import 'Object/Component/btn';
+@import 'Object/Component/card';
+@import 'Object/Component/cardList';
+@import 'Object/Component/flash';
+@import 'Object/Component/form';
+@import 'Object/Component/menu';
+@import 'Object/Component/menuTrigger';
+@import 'Object/Component/spMenu';

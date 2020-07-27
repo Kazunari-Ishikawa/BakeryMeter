@@ -1,0 +1,53 @@
+.c-message {
+  width: 70%;
+  margin-bottom: $space_default;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include mq('md') {
+    width: 80%;
+  }
+  @include mq('sm') {
+    width: 90%;
+    margin-bottom: $space_m;
+  }
+  &--other {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &--myself {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+  }
+  &__content {
+    padding: $space_s $space_default;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: left;
+    &:hover {
+      opacity: 0.8;
+    }
+    &--other {
+      background: rgba($color: $color_main, $alpha: 0.3);
+      border-radius: 20px 20px 20px 0;
+    }
+    &--myself {
+      background: rgba($color: $color_sub1, $alpha: 0.3);
+      border-radius: 20px 20px 0 20px;
+    }
+    @include mq() {
+      font-size: $font-size_m;
+      padding: $space_s $space_m;
+    }
+  }
+  &__date {
+    font-size: $font-size_m;
+    &--myself {
+      text-align: right;
+    }
+    @include mq() {
+      font-size: $font-size_s;
+    }
+  }
+}
