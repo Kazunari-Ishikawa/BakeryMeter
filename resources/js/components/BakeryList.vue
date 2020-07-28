@@ -16,15 +16,21 @@
         <Bakery v-for="bakery in bakerys" :bakery="bakery" :key="bakery.id" />
       </template>
     </v-row>
+
+    <v-row>
+      <Pagination :total-page="totalPage" @move-page="movePage" />
+    </v-row>
   </v-container>
 </template>
 
 <script>
 import Bakery from "./Bakery";
+import Pagination from "./Pagination";
 
 export default {
   components: {
     Bakery,
+    Pagination,
   },
   data() {
     return {
@@ -37,6 +43,7 @@ export default {
       lastPage: 0,
       fromNum: 0,
       toNum: 0,
+      totalPage: 1,
     };
   },
   created() {
@@ -46,9 +53,11 @@ export default {
     // Bakeryを検索する
     async search() {
       this.isLoading = true;
-      const response = await axios.get("/bakery_request").catch((error) => {
-        return error.response;
-      });
+      const response = await axios
+        .get(`/bakery_request?offset=${this.pageNum}`)
+        .catch((error) => {
+          return error.response;
+        });
       console.log(response);
       if (response.status !== 200) {
         alert("エラーが発生しました。再度やり直してください。");
@@ -58,13 +67,14 @@ export default {
         this.bakerys = response.data.rest;
         this.hitPerPage = response.data.hit_per_page;
         this.totalHitCount = response.data.total_hit_count;
+        this.totalPage = Math.ceil(this.totalHitCount / this.hitPerPage);
       }
       this.isLoading = false;
     },
     // ページを遷移する
     movePage(page) {
       this.pageNum = page;
-      this.searchWorks();
+      this.search();
     },
     // Bookmarkへの追加または削除を判定する
     clickBookmark({ id, bookmarked }) {
