@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/bakery', 'BakeryController@index')->name('bakery.index');
 
+Route::get('bakery_request', 'BakeryController@bakery_request');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

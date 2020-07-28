@@ -12,6 +12,7 @@
   <div class="l-container__body--withSide">
     <div class="p-bakeryList">
       ここに検索結果が入る
+      <bakery-list></bakery-list>
     </div>
   </div>
 
