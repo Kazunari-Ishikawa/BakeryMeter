@@ -229,4 +229,7 @@ return [
 
     ],
 
+    // ぐるなびAPIのkey idを追加
+    'key_id' => env('KEY_ID'),
+
 ];
