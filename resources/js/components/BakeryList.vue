@@ -1,23 +1,35 @@
 <template>
-  <div class="c-workList">
-    <div class="c-workList__header">
-      <h2 class="c-workList__title">一覧</h2>
-      <p class="c-workList__info">
-        {{ totalNum }}件中
-        <span>{{ fromNum }}</span> -
-        <span>{{ toNum }}</span>件表示
-      </p>
-    </div>
-    <v-btn @click="search">検索</v-btn>
-  </div>
+  <v-container>
+    <v-row>
+      <div class="c-bakeryList__header">
+        <h2 class="c-bakeryList__title">一覧</h2>
+        <p class="c-bakeryList__info">
+          全{{ totalHitCount }}件（
+          <span>{{ fromNum }}</span> -
+          <span>{{ toNum }}</span>件）
+        </p>
+      </div>
+    </v-row>
+
+    <v-row>
+      <template v-if="!isLoading">
+        <Bakery v-for="bakery in bakerys" :bakery="bakery" :key="bakery.id" />
+      </template>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import Bakery from "./Bakery";
+
 export default {
+  components: {
+    Bakery,
+  },
   data() {
     return {
       isLoding: false,
-      bakery: [],
+      bakerys: [],
       hitPerPage: null,
       totalHitCount: null,
       pageNum: 1,
@@ -43,7 +55,7 @@ export default {
         return false;
       }
       if (response.status === 200) {
-        this.bakery = response.data.rest;
+        this.bakerys = response.data.rest;
         this.hitPerPage = response.data.hit_per_page;
         this.totalHitCount = response.data.total_hit_count;
       }

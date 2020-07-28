@@ -312,13 +312,14 @@ textarea {
 .l-container__body--withSide {
   width: 75%;
   margin-left: 40px;
-  box-sizing: border-box;
+  padding: 16px;
 }
 
 @media screen and (max-width: 768px) {
   .l-container__body--withSide {
     width: 100%;
     margin-left: 0;
+    padding: 8px;
   }
 }
 
@@ -1109,5 +1110,42 @@ textarea {
   font-size: 14px;
   padding: 4px 0;
   transition: 0.3s;
+}
+
+.c-bakeryList {
+  width: 100%;
+}
+
+.c-bakeryList__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: white;
+  margin-bottom: 40px;
+  padding: 16px;
+}
+
+@media screen and (max-width: 576px) {
+  .c-bakeryList__header {
+    margin-bottom: 16px;
+  }
+}
+
+.c-bakeryList__title {
+  color: #de9610;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  .c-bakeryList__title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .c-bakeryList__info {
+    font-size: 12px;
+  }
 }
 
